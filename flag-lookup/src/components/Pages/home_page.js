@@ -1,9 +1,17 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import AllCountries from "../Countries/AllCountries";
+import CountriesInfo from "../countriesInfo/CountriesInfo";
 
-export const home_page = () => {
+export const Home = () => {
   return (
-    <div>
-      <h1>home_page</h1>
-    </div>
+    <>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<AllCountries />} />
+          <Route path="/country/:countryName" element={<CountriesInfo />} />
+        </Routes>
+      </div>
+    </>
   );
 };
