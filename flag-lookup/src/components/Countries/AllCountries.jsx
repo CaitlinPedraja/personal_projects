@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { apiURL } from "../util/api";
-
-import SearchInput from "../Search/SearchInput";
-import FilterCountry from "../FilterCountry/FilterCountry";
+import "./AllCountries.css"
 
 import { Link } from "react-router-dom";
 
@@ -30,37 +28,6 @@ const AllCountries = () => {
     }
   };
 
-  const getCountryByName = async (countryName) => {
-    try {
-      const res = await fetch(`${apiURL}/name/${countryName}`);
-
-      if (!res.ok) throw new Error("Not found any country!");
-
-      const data = await res.json();
-      setCountries(data);
-
-      setIsLoading(false);
-    } catch (error) {
-      setIsLoading(false);
-      setError(error.message);
-    }
-  };
-
-  const getCountryByRegion = async (regionName) => {
-    try {
-      const res = await fetch(`${apiURL}/region/${regionName}`);
-
-      if (!res.ok) throw new Error("Failed..........");
-
-      const data = await res.json();
-      setCountries(data);
-
-      setIsLoading(false);
-    } catch (error) {
-      setIsLoading(false);
-      setError(false);
-    }
-  };
 
   useEffect(() => {
     getAllCountries();
@@ -68,16 +35,6 @@ const AllCountries = () => {
 
   return (
     <div className="all__country__wrapper">
-      <div className="country__top">
-        <div className="search">
-          <SearchInput onSearch={getCountryByName} />
-        </div>
-
-        <div className="filter">
-          <FilterCountry onSelect={getCountryByRegion} />
-        </div>
-      </div>
-
       <div className="country__bottom">
         {isLoading && !error && <h4>Loading........</h4>}
         {error && !isLoading && <h4>{error}</h4>}
