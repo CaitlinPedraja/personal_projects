@@ -13,7 +13,7 @@ body {
   color: #FAF5E9;
   text-align: center;
   font-size: 3.5rem;
-  margin-top: 10%;
+  margin-top: 8%;
   font-family: Gurajada;
 }
 .about_container {
@@ -26,14 +26,28 @@ body {
 }
 .about_box {
   border-radius: 8px;
-  padding: 10%;
-  box-shadow: 0 0 5px 2px #f5d659;
+  padding: 5%;
+  box-shadow: 0 0 5px 2px #FAF5E9;
+}
+.image_box_container{
+  display: flex;
+  justify-content: center; 
+  gap: 5%;
 }
 .image_box {
-
-  box-shadow: 0 0 5px 2px #f5d659;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 8%;
+  margin-top: 5%;
+  box-shadow: 0 0 3px 2px #1b3439;
+  background-color: #FAF5E9;
+  align-items: center;
+  display: flex; 
+  justify-content: center;
 }
+
 .image {
-  width: 100%; /* Ensure images fit within their boxes */
-  height: auto;
+  width: 80%; 
+  height: 80%;
+  object-fit: contain;
 }
