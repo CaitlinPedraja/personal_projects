@@ -1,7 +1,7 @@
 import React from "react";
-import React_icon from '../React-icon.png';
-import css from '../css.png';
-import api from '../api.png';
+import React_icon from '../images/React-icon.png';
+import css from '../images/css.png';
+import api from '../images/api.png';
 
 export const About = () => {
 
