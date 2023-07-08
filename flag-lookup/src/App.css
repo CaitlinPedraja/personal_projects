@@ -12,13 +12,13 @@ body {
 .pages {
   color: #FAF5E9;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 8%;
   font-family: Gurajada;
 }
 .about_container {
   font-size: 2rem;
-  padding: 0% 5%;
+  padding: 0% 7%;
   position: relative;
 }
 .about_container h1{
@@ -51,3 +51,23 @@ body {
   height: 80%;
   object-fit: contain;
 }
+.button_container{
+    display: flex;
+    justify-content: center; 
+    gap: 2%;
+}
+button{  
+  background-color: #1b3439;
+  border-radius: 8%;
+  margin-top: 5%;
+}
+img{
+  height: 80px;
+  width: auto;
+}
+.contact_container {
+  font-size: 2rem;
+  padding: 0% 20%;
+  position: relative;
+}
+
