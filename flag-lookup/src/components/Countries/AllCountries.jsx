@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { apiURL } from "../util/api";
 import "./AllCountries.css";
 import SearchInput from "../Search/SearchInput";
-
+import FilterCountry from "../filter/FilterCountry";
 import { Link } from "react-router-dom";
 
 const AllCountries = () => {
@@ -46,6 +46,28 @@ try {
 }
 }
 
+const getCountryByRegion = async (regionName) => {
+  try {
+    if (regionName === "All"){
+      getAllCountries()
+    }
+    else{
+    
+    const res = await fetch(`${apiURL}/region/${regionName}`);
+
+    if (!res.ok) throw new Error("Failed..........");
+
+    const data = await res.json();
+    setCountries(data);
+
+    setIsLoading(false);
+    }
+  } catch (error) {
+    setIsLoading(false);
+    setError(false);
+  }
+};
+
   useEffect(() => {
     getAllCountries();
   }, []);
@@ -56,6 +78,10 @@ try {
         <div className="search">
           <SearchInput onSearch={getCountryByName}/>
         </div>
+      <div className="filer">
+        <FilterCountry onSelect={getCountryByRegion}/>
+      </div>
+
       </div>
 
       <div className="country__bottom">

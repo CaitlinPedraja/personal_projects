@@ -71,5 +71,18 @@ input{
 ::placeholder{
   color: #faf5e9;
 }
+.option{
+  height: 50px;
+  width: 90px;
+  color: #faf5e9;
+}
+.filter_container{
+  display: flex;
+  position: absolute;
+  left: 30%;
+  bottom: 20%;
+  gap: 2%;
+  
+}
 
 
