@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import AllCountries from "../Countries/AllCountries";
 import CountriesInfo from "../countriesInfo/CountriesInfo";
 
-
 export const Home = () => {
   return (
     <>

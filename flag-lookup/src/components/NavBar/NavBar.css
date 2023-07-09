@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  border-bottom: 3px solid #FAF5E9;
+  border-bottom: 3px solid #faf5e9;
 }
 
 .nav-container {
@@ -25,7 +25,7 @@
 }
 
 .nav-logo {
-  color: #FAF5E9;
+  color: #faf5e9;
   align-items: center;
   margin-left: 25px;
   cursor: pointer;
@@ -44,7 +44,7 @@
 }
 
 .nav-links {
-  color: #FAF5E9;
+  color: #faf5e9;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -67,7 +67,9 @@
   height: 3px;
   width: 0;
   background: transparent;
-  transition: width 0.7s ease, background-color 0.5s ease;
+  transition:
+    width 0.7s ease,
+    background-color 0.5s ease;
 }
 
 .nav-item:hover:after {
@@ -115,11 +117,11 @@
   }
 
   .nav-icon {
-      color: #000;
-      font-size: 30px;
-      font-family: Gurajada;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+    color: #000;
+    font-size: 30px;
+    font-family: Gurajada;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 }

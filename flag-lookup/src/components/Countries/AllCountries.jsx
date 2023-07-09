@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { apiURL } from "../util/api";
-import "./AllCountries.css"
+import "./AllCountries.css";
+import SearchInput from "../Search/SearchInput";
 
 import { Link } from "react-router-dom";
 
@@ -28,6 +29,22 @@ const AllCountries = () => {
     }
   };
 
+const getCountryByName = async(countryName)=>{
+try {
+  const res = await fetch(`${apiURL}/name/${countryName}`);
+
+  if (!res.ok) throw new Error('Country not found');
+
+  const data = await res.json();
+  setCountries(data);
+
+  setIsLoading(false);
+
+} catch (error) {
+  setIsLoading(false);
+  setError(error.message);
+}
+}
 
   useEffect(() => {
     getAllCountries();
@@ -35,6 +52,12 @@ const AllCountries = () => {
 
   return (
     <div className="all__country__wrapper">
+      <div className="country_top">
+        <div className="search">
+          <SearchInput onSearch={getCountryByName}/>
+        </div>
+      </div>
+
       <div className="country__bottom">
         {isLoading && !error && <h4>Loading........</h4>}
         {error && !isLoading && <h4>{error}</h4>}
