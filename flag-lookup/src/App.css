@@ -11,7 +11,8 @@ body {
   color: #faf5e9;
   text-align: center;
   font-size: 3rem;
- 
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: Gurajada;
 }
 .about_container {
