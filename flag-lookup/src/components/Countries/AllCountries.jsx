@@ -5,6 +5,7 @@ import SearchInput from "../Search/SearchInput";
 import FilterCountry from "../filter/FilterCountry";
 import { Link } from "react-router-dom";
 
+
 const AllCountries = () => {
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

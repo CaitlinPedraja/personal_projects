@@ -1,6 +1,7 @@
 #import what we need
 from requests_html import HTMLSession
 import pandas as pd
+import traceback
 session = HTMLSession()
 
 #use session to get the page
@@ -17,4 +18,5 @@ for item in articles:
         newsitem = item.find('h4', first = True)
         titles_df.append(newsitem.title)
     except: 
-        pass
+        print(traceback)
+
