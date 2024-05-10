@@ -12,7 +12,7 @@ const SearchInput = ({ onSearch }) => {
     <form onSubmit={submitHandler}>
       <input
         type="text"
-        placeholder="Search a country......"
+        placeholder="Country: "
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />

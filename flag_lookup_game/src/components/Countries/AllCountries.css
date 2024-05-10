@@ -64,16 +64,20 @@ input{
   font-weight: 400;
   height: 40px;
   width: 180px;
-  padding: 0% 1%;
+  padding: 1% 1%;
+  
   background-color:#1b3439;
   border: none;
   outline: none;
   border-radius: 5px;
   color: #faf5e9;
+}
+.search{
+  padding-left: 5%;
   display: flex;
   position: absolute;
-  left: 5%;
-  bottom: 15%;
+  
+  bottom: 10%;
 }
 
 ::placeholder{
@@ -96,5 +100,3 @@ input{
   gap: 2%;
   
 }
-
-

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+
 import "./NavBar.css";
 
 function NavBar() {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
+
   return (
     <>
       <nav className="navbar">
@@ -27,28 +28,45 @@ function NavBar() {
                 Home
               </NavLink>
             </li>
+            
             <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contact Us
-              </NavLink>
-            </li>
+                <NavLink
+                  exact
+                  to="/game"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Play
+                </NavLink>
+              </li>
+          
+        
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/login"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Login
+                </NavLink>
+              </li>
+
+                    
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/logout"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Logout
+                </NavLink>
+              </li>
+         
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
